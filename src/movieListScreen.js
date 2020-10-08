@@ -14,7 +14,7 @@ class MovieListScreen extends React.Component{
     handleSearch=(e)=>{
         const data=e.target.value
         this.setState({data})
-        axios.get(`http://www.omdbapi.com/?apikey=83aba685&s=${data}&type=movie`)
+        axios.get(`https://www.omdbapi.com/?apikey=83aba685&s=${data}&type=movie`)
         .then(response=>{
             const search=response.data.Search
             this.setState({movie:search})
